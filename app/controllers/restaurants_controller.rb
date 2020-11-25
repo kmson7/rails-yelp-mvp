@@ -8,8 +8,21 @@ class RestaurantsController < ApplicationController
   end
 
   def new
+    @restaurant = Restaurant.new
   end
 
   def create
+    # restaurant_params = params[:restaurant]
+    restaurant = Restaurant.new(restaurant_params)
+    restaurant.save
+    # raise
   end
+
+  private
+
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :address, :phone_number, :category)
+  end
+
+
 end

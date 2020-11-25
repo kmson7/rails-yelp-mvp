@@ -1,0 +1,13 @@
+<!-- <p>hello from restaurants!! loaded via restaurants#index</p> -->
+
+<h2>Welcome to this yelp clone</h2>
+<p>Here are restaurants in this area:</p>
+
+
+<% @restaurants.each do |restaurant| %>
+
+<ul>
+  <li> <%= restaurant.name %> </li>
+</ul>
+
+<% end %>
