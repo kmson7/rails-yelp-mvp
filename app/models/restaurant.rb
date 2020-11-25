@@ -4,5 +4,5 @@ class Restaurant < ApplicationRecord
   validates :phone_number, presence: true
   validates :name, presence: true
   validates :address, presence: true
-  validates :category, presence: true, acceptance: { accept: ['chinese', 'italian', 'japanese', 'french', 'belgian'] }
+  validates :category, presence: true, acceptance: { accept: ['Chinese', 'Italian', 'Japanese', 'French', 'Belgian'] }
 end

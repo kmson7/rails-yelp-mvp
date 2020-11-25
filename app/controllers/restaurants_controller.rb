@@ -15,7 +15,6 @@ class RestaurantsController < ApplicationController
     # restaurant_params = params[:restaurant]
     restaurant = Restaurant.new(restaurant_params)
     restaurant.save
-    # raise
   end
 
   private
@@ -23,6 +22,5 @@ class RestaurantsController < ApplicationController
   def restaurant_params
     params.require(:restaurant).permit(:name, :address, :phone_number, :category)
   end
-
 
 end
